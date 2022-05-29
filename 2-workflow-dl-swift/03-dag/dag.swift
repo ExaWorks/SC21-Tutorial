@@ -1,4 +1,13 @@
 
+/*
+   Example 3: DAG
+
+                      /- work(1) -> out_A -\
+  spawn() -> cfg.txt --- work(2) -> out_B --- outs -> merge() -> merged.txt
+                      \- work(3) -> out_C -/
+
+*/
+
 app (file o) spawn(file i)
 {
   "./task.sh" 0 o i ;
